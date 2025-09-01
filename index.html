@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Premium Electronics</title>
+    <meta name="description" content="Premium electronics and technology products with fast shipping">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-bolt"></i> TechStore</h1>
+                </div>
+                
+                <nav class="navigation">
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link active" data-page="products">Products</a></li>
+                        <li><a href="#" class="nav-link" data-page="cart">Cart</a></li>
+                        <li><a href="#" class="nav-link" data-page="checkout">Checkout</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="cart-icon-container">
+                        <button class="cart-icon" aria-label="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Products Page -->
+            <div id="products-page" class="page active">
+                <div class="page-header">
+                    <h1>Premium Electronics</h1>
+                    <p>Discover the latest technology and premium electronics</p>
+                </div>
+                
+                <div class="content-layout">
+                    <aside class="sidebar">
+                        <div class="filters">
+                            <!-- Filters will be dynamically generated -->
+                        </div>
+                    </aside>
+                    
+                    <div class="main-content-area">
+                        <div class="products-header">
+                            <div class="results-info">
+                                <span class="results-count">Loading products...</span>
+                            </div>
+                        </div>
+                        
+                        <div class="products-grid">
+                            <!-- Products will be dynamically generated -->
+                        </div>
+                        
+                        <div class="loading-spinner hidden">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <span>Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Page -->
+            <div id="cart-page" class="page">
+                <div class="page-header">
+                    <h1>Shopping Cart</h1>
+                    <p>Review your selected items</p>
+                </div>
+                
+                <div class="cart-content">
+                    <!-- Cart content will be dynamically generated -->
+                </div>
+            </div>
+
+            <!-- Checkout Page -->
+            <div id="checkout-page" class="page">
+                <div class="page-header">
+                    <h1>Checkout</h1>
+                    <p>Complete your purchase</p>
+                </div>
+                
+                <div class="checkout-content">
+                    <!-- Checkout content will be dynamically generated -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-sidebar-close" aria-label="Close Cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-sidebar-content">
+            <!-- Cart sidebar content will be dynamically generated -->
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Product Detail Modal -->
+    <div class="modal product-modal" id="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Product Details</h3>
+                <button class="modal-close" aria-label="Close Modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Product details will be dynamically generated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div class="notification-container">
+        <!-- Notifications will be dynamically generated -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TechStore</h4>
+                    <p>Your trusted destination for premium electronics and technology products.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechStore. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="src/js/cart.js"></script>
+    <script src="src/js/products.js"></script>
+    <script src="src/js/ui.js"></script>
+    <script src="src/js/checkout.js"></script>
+    <script src="src/js/app.js"></script>
+</body>
+</html>

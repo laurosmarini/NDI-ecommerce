@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - GEMINI STORE</title>
+    <meta name="description" content="Browse our complete catalog of cutting-edge technology products">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">GEMINI STORE</a>
+            </div>
+            <div class="hamburger-menu" aria-label="Toggle navigation">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="products.html" class="active">PRODUCTS</a></li>
+                <li><a href="ecommerce.html">FEATURED</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="pricing.html">PRICING</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="cart.html" class="cart-link">CART <span class="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">ALL PRODUCTS</h1>
+                <p class="page-subtitle">Discover our complete collection of cutting-edge technology</p>
+            </div>
+        </section>
+
+        <section class="filters">
+            <div class="container">
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-category="all">ALL</button>
+                    <button class="filter-btn" data-category="electronics">ELECTRONICS</button>
+                    <button class="filter-btn" data-category="audio">AUDIO</button>
+                    <button class="filter-btn" data-category="wearables">WEARABLES</button>
+                    <button class="filter-btn" data-category="accessories">ACCESSORIES</button>
+                </div>
+                <div class="sort-controls">
+                    <select class="sort-select">
+                        <option value="name">Sort by Name</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <div class="container">
+                <div class="grid" id="products-container">
+                    <!-- Electronics -->
+                    <div class="product-card" data-category="electronics">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/laptop/400/300" alt="GEMINI Laptop Pro">
+                            <div class="product-badge">NEW</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI LAPTOP PRO</h3>
+                            <p class="product-description">Ultra-portable powerhouse with 16GB RAM and SSD storage</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(127 reviews)</span>
+                            </div>
+                            <div class="product-price">$1,299.99</div>
+                            <button class="add-to-cart-btn" data-product-id="1" data-name="GEMINI Laptop Pro" data-price="1299.99" data-image="https://picsum.photos/seed/laptop/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="electronics">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/smartphone/400/300" alt="GEMINI Phone X">
+                            <div class="product-badge sale">SALE</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI PHONE X</h3>
+                            <p class="product-description">5G smartphone with triple camera system and all-day battery</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(89 reviews)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="original-price">$899.99</span>
+                                <span class="sale-price">$699.99</span>
+                            </div>
+                            <button class="add-to-cart-btn" data-product-id="2" data-name="GEMINI Phone X" data-price="699.99" data-image="https://picsum.photos/seed/smartphone/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="electronics">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/tablet/400/300" alt="GEMINI Tablet Ultra">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI TABLET ULTRA</h3>
+                            <p class="product-description">12.9-inch display perfect for creativity and productivity</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(203 reviews)</span>
+                            </div>
+                            <div class="product-price">$799.99</div>
+                            <button class="add-to-cart-btn" data-product-id="3" data-name="GEMINI Tablet Ultra" data-price="799.99" data-image="https://picsum.photos/seed/tablet/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <!-- Audio -->
+                    <div class="product-card" data-category="audio">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/headphones/400/300" alt="GEMINI Headphones Pro">
+                            <div class="product-badge">POPULAR</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI HEADPHONES PRO</h3>
+                            <p class="product-description">Noise-cancelling wireless headphones with premium sound</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(445 reviews)</span>
+                            </div>
+                            <div class="product-price">$249.99</div>
+                            <button class="add-to-cart-btn" data-product-id="4" data-name="GEMINI Headphones Pro" data-price="249.99" data-image="https://picsum.photos/seed/headphones/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="audio">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/speaker/400/300" alt="GEMINI Speaker Boom">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI SPEAKER BOOM</h3>
+                            <p class="product-description">Portable Bluetooth speaker with 360° sound and bass boost</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(156 reviews)</span>
+                            </div>
+                            <div class="product-price">$149.99</div>
+                            <button class="add-to-cart-btn" data-product-id="5" data-name="GEMINI Speaker Boom" data-price="149.99" data-image="https://picsum.photos/seed/speaker/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="audio">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/earbuds/400/300" alt="GEMINI Earbuds True">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI EARBUDS TRUE</h3>
+                            <p class="product-description">True wireless earbuds with adaptive noise cancellation</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(312 reviews)</span>
+                            </div>
+                            <div class="product-price">$179.99</div>
+                            <button class="add-to-cart-btn" data-product-id="6" data-name="GEMINI Earbuds True" data-price="179.99" data-image="https://picsum.photos/seed/earbuds/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <!-- Wearables -->
+                    <div class="product-card" data-category="wearables">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/smartwatch/400/300" alt="GEMINI Smartwatch">
+                            <div class="product-badge">FEATURED</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI SMARTWATCH</h3>
+                            <p class="product-description">Advanced fitness tracking with heart rate and GPS monitoring</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(234 reviews)</span>
+                            </div>
+                            <div class="product-price">$299.99</div>
+                            <button class="add-to-cart-btn" data-product-id="7" data-name="GEMINI Smartwatch" data-price="299.99" data-image="https://picsum.photos/seed/smartwatch/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="wearables">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/fitness/400/300" alt="GEMINI Fitness Band">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI FITNESS BAND</h3>
+                            <p class="product-description">Lightweight fitness tracker with 7-day battery life</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(98 reviews)</span>
+                            </div>
+                            <div class="product-price">$89.99</div>
+                            <button class="add-to-cart-btn" data-product-id="8" data-name="GEMINI Fitness Band" data-price="89.99" data-image="https://picsum.photos/seed/fitness/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <!-- Accessories -->
+                    <div class="product-card" data-category="accessories">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/charger/400/300" alt="GEMINI Wireless Charger">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI WIRELESS CHARGER</h3>
+                            <p class="product-description">Fast wireless charging pad with LED indicator</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(67 reviews)</span>
+                            </div>
+                            <div class="product-price">$39.99</div>
+                            <button class="add-to-cart-btn" data-product-id="9" data-name="GEMINI Wireless Charger" data-price="39.99" data-image="https://picsum.photos/seed/charger/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="accessories">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/case/400/300" alt="GEMINI Phone Case">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI PHONE CASE</h3>
+                            <p class="product-description">Premium leather case with card slots and magnetic closure</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(189 reviews)</span>
+                            </div>
+                            <div class="product-price">$29.99</div>
+                            <button class="add-to-cart-btn" data-product-id="10" data-name="GEMINI Phone Case" data-price="29.99" data-image="https://picsum.photos/seed/case/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="accessories">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/cable/400/300" alt="GEMINI USB-C Cable">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI USB-C CABLE</h3>
+                            <p class="product-description">Braided USB-C cable with fast data transfer and charging</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(143 reviews)</span>
+                            </div>
+                            <div class="product-price">$19.99</div>
+                            <button class="add-to-cart-btn" data-product-id="11" data-name="GEMINI USB-C Cable" data-price="19.99" data-image="https://picsum.photos/seed/cable/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="electronics">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/monitor/400/300" alt="GEMINI Monitor 4K">
+                            <div class="product-badge">PRO</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI MONITOR 4K</h3>
+                            <p class="product-description">27-inch 4K display with HDR and USB-C connectivity</p>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(78 reviews)</span>
+                            </div>
+                            <div class="product-price">$549.99</div>
+                            <button class="add-to-cart-btn" data-product-id="12" data-name="GEMINI Monitor 4K" data-price="549.99" data-image="https://picsum.photos/seed/monitor/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GEMINI STORE</h4>
+                    <p>Neobrutalist e-commerce platform delivering bold shopping experiences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>SUPPORT</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GEMINI STORE. All rights reserved. Built with neobrutalist design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

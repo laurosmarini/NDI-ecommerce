@@ -1,0 +1,135 @@
+/* NEOBRUTALIST DESIGN SYSTEM - CSS VARIABLES */
+
+:root {
+  /* === COLOR PALETTE === */
+  /* Primary Colors */
+  --neon-pink: #FF10F0;
+  --electric-blue: #00F0FF;
+  --lime-green: #39FF14;
+  --sunshine-yellow: #FFFF00;
+  --hot-orange: #FF4500;
+  
+  /* Secondary Colors */
+  --purple: #8A2BE2;
+  --cyan: #00FFFF;
+  --magenta: #FF00FF;
+  --red: #FF0040;
+  --green: #00FF40;
+  
+  /* Neutral Colors */
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray-100: #F5F5F5;
+  --gray-900: #1A1A1A;
+  
+  /* === TYPOGRAPHY === */
+  --font-family-primary: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-family-display: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  
+  /* Font Sizes - Fluid Typography */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.5rem);
+  --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.875rem);
+  --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 2.25rem);
+  --font-size-3xl: clamp(1.875rem, 1.5rem + 1.875vw, 3rem);
+  --font-size-4xl: clamp(2.25rem, 1.8rem + 2.25vw, 3.75rem);
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* === SPACING === */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  
+  /* === BORDERS === */
+  --border-width-thin: 2px;
+  --border-width-normal: 4px;
+  --border-width-thick: 6px;
+  --border-width-xl: 8px;
+  
+  --border-radius-none: 0;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 9999px;
+  
+  /* === SHADOWS === */
+  --shadow-brutal-sm: 4px 4px 0px var(--black);
+  --shadow-brutal-md: 6px 6px 0px var(--black);
+  --shadow-brutal-lg: 8px 8px 0px var(--black);
+  --shadow-brutal-xl: 12px 12px 0px var(--black);
+  --shadow-brutal-2xl: 16px 16px 0px var(--black);
+  
+  /* Colored Shadows */
+  --shadow-pink: 8px 8px 0px var(--neon-pink);
+  --shadow-blue: 8px 8px 0px var(--electric-blue);
+  --shadow-green: 8px 8px 0px var(--lime-green);
+  --shadow-yellow: 8px 8px 0px var(--sunshine-yellow);
+  
+  /* === ANIMATIONS === */
+  --transition-fast: 0.15s ease-out;
+  --transition-normal: 0.25s ease-out;
+  --transition-slow: 0.4s ease-out;
+  
+  /* Animation Curves */
+  --ease-brutal: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-sharp: cubic-bezier(0.4, 0, 0.6, 1);
+  
+  /* === BREAKPOINTS === */
+  --bp-xs: 320px;
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+  
+  /* === Z-INDEX === */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* === DARK MODE SUPPORT === */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gray-100: #1A1A1A;
+    --gray-900: #F5F5F5;
+  }
+}
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0s;
+    --transition-normal: 0s;
+    --transition-slow: 0s;
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="carousel.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Carousel</h1>
+        <div class="carousel" role="region" aria-label="Image Carousel">
+            <div class="slides">
+                <input type="radio" name="carousel" id="slide1" checked>
+                <input type="radio" name="carousel" id="slide2">
+                <input type="radio" name="carousel" id="slide3">
+
+                <div class="slide" style="background-image: url('https://via.placeholder.com/800x400/ff0000/ffffff');">
+                    <div class="slide-content">
+                        <h2>Slide 1</h2>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('https://via.placeholder.com/800x400/00ff00/ffffff');">
+                    <div class="slide-content">
+                        <h2>Slide 2</h2>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('https://via.placeholder.com/800x400/0000ff/ffffff');">
+                    <div class="slide-content">
+                        <h2>Slide 3</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-navigation">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

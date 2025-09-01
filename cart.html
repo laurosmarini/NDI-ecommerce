@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - GEMINI STORE</title>
+    <meta name="description" content="Review your items and proceed to checkout">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">GEMINI STORE</a>
+            </div>
+            <div class="hamburger-menu" aria-label="Toggle navigation">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="ecommerce.html">FEATURED</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="pricing.html">PRICING</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="cart.html" class="cart-link active">CART <span class="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">SHOPPING CART</h1>
+                <p class="page-subtitle">Review your items before checkout</p>
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <div class="container">
+                <div class="cart-content">
+                    <!-- Empty Cart State -->
+                    <div class="empty-cart" id="empty-cart">
+                        <div class="empty-cart-icon">🛒</div>
+                        <h2>YOUR CART IS EMPTY</h2>
+                        <p>Add some amazing products to get started!</p>
+                        <a href="products.html" class="btn btn-primary">BROWSE PRODUCTS</a>
+                    </div>
+
+                    <!-- Cart Items -->
+                    <div class="cart-items" id="cart-items" style="display: none;">
+                        <div class="cart-header">
+                            <h2>CART ITEMS <span class="item-count" id="item-count">(0 items)</span></h2>
+                            <button class="clear-cart-btn" id="clear-cart">CLEAR ALL</button>
+                        </div>
+
+                        <div class="cart-list" id="cart-list">
+                            <!-- Cart items will be dynamically inserted here -->
+                        </div>
+
+                        <div class="cart-summary">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Shipping:</span>
+                                <span id="shipping">$9.99</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax (8.5%):</span>
+                                <span id="tax">$0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="total">$0.00</span>
+                            </div>
+                        </div>
+
+                        <div class="cart-actions">
+                            <a href="products.html" class="btn btn-secondary">CONTINUE SHOPPING</a>
+                            <a href="checkout.html" class="btn btn-primary" id="checkout-btn">PROCEED TO CHECKOUT</a>
+                        </div>
+                    </div>
+
+                    <!-- Recommended Products -->
+                    <div class="recommended-products">
+                        <h3>YOU MIGHT ALSO LIKE</h3>
+                        <div class="recommendations-grid">
+                            <div class="recommendation-card">
+                                <div class="product-image">
+                                    <img src="https://picsum.photos/seed/rec1/300/200" alt="GEMINI Power Bank">
+                                </div>
+                                <div class="product-info">
+                                    <h4>GEMINI POWER BANK</h4>
+                                    <p class="price">$59.99</p>
+                                    <button class="add-to-cart-btn" data-product-id="101" data-name="GEMINI Power Bank" data-price="59.99" data-image="https://picsum.photos/seed/rec1/300/200">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="recommendation-card">
+                                <div class="product-image">
+                                    <img src="https://picsum.photos/seed/rec2/300/200" alt="GEMINI Mouse Pro">
+                                </div>
+                                <div class="product-info">
+                                    <h4>GEMINI MOUSE PRO</h4>
+                                    <p class="price">$79.99</p>
+                                    <button class="add-to-cart-btn" data-product-id="102" data-name="GEMINI Mouse Pro" data-price="79.99" data-image="https://picsum.photos/seed/rec2/300/200">ADD TO CART</button>
+                                </div>
+                            </div>
+                            <div class="recommendation-card">
+                                <div class="product-image">
+                                    <img src="https://picsum.photos/seed/rec3/300/200" alt="GEMINI Keyboard">
+                                </div>
+                                <div class="product-info">
+                                    <h4>GEMINI KEYBOARD</h4>
+                                    <p class="price">$129.99</p>
+                                    <button class="add-to-cart-btn" data-product-id="103" data-name="GEMINI Keyboard" data-price="129.99" data-image="https://picsum.photos/seed/rec3/300/200">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GEMINI STORE</h4>
+                    <p>Neobrutalist e-commerce platform delivering bold shopping experiences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>SUPPORT</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GEMINI STORE. All rights reserved. Built with neobrutalist design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

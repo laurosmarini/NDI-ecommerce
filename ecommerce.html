@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Products - GEMINI STORE</title>
+    <meta name="description" content="Discover our featured products with premium quality and cutting-edge technology">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">GEMINI STORE</a>
+            </div>
+            <div class="hamburger-menu" aria-label="Toggle navigation">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="ecommerce.html" class="active">FEATURED</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="pricing.html">PRICING</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="cart.html" class="cart-link">CART <span class="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">FEATURED PRODUCTS</h1>
+                <p class="page-subtitle">Handpicked premium items with exceptional quality</p>
+            </div>
+        </section>
+
+        <section class="featured-product-hero">
+            <div class="container">
+                <div class="product-showcase">
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img src="https://picsum.photos/seed/smartwatch/800/600" alt="GEMINI Smartwatch Pro" id="main-product-image">
+                            <div class="image-badges">
+                                <span class="badge featured">FEATURED</span>
+                                <span class="badge best-seller">BEST SELLER</span>
+                            </div>
+                        </div>
+                        <div class="thumbnail-images">
+                            <img src="https://picsum.photos/seed/watch1/150/150" alt="Smartwatch angle 1" class="thumbnail active">
+                            <img src="https://picsum.photos/seed/watch2/150/150" alt="Smartwatch angle 2" class="thumbnail">
+                            <img src="https://picsum.photos/seed/watch3/150/150" alt="Smartwatch angle 3" class="thumbnail">
+                            <img src="https://picsum.photos/seed/watch4/150/150" alt="Smartwatch angle 4" class="thumbnail">
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h1 class="product-title">GEMINI SMARTWATCH PRO</h1>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-text">(4.9/5 from 234 reviews)</span>
+                        </div>
+                        <p class="product-description">
+                            The ultimate smartwatch experience. Featuring advanced health monitoring, GPS tracking, 
+                            waterproof design, and 7-day battery life. Compatible with both iOS and Android devices.
+                        </p>
+                        <div class="product-features">
+                            <div class="feature">⌚ 7-Day Battery</div>
+                            <div class="feature">💧 Waterproof</div>
+                            <div class="feature">📱 Smart Notifications</div>
+                            <div class="feature">❤️ Heart Rate Monitor</div>
+                        </div>
+                        <div class="product-pricing">
+                            <span class="original-price">$399.99</span>
+                            <span class="current-price">$299.99</span>
+                            <span class="discount">25% OFF</span>
+                        </div>
+                        <div class="product-options">
+                            <div class="option-group">
+                                <label>Color:</label>
+                                <div class="color-options">
+                                    <div class="color-option active" data-color="black" style="background: #000"></div>
+                                    <div class="color-option" data-color="silver" style="background: #c0c0c0"></div>
+                                    <div class="color-option" data-color="gold" style="background: #ffd700"></div>
+                                </div>
+                            </div>
+                            <div class="option-group">
+                                <label>Size:</label>
+                                <div class="size-options">
+                                    <button class="size-option active" data-size="42mm">42MM</button>
+                                    <button class="size-option" data-size="46mm">46MM</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <button class="qty-btn minus">−</button>
+                                <input type="number" value="1" min="1" class="qty-input" id="quantity">
+                                <button class="qty-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" data-product-id="7" data-name="GEMINI Smartwatch Pro" data-price="299.99" data-image="https://picsum.photos/seed/smartwatch/800/600">ADD TO CART</button>
+                            <button class="wishlist-btn">♡ WISHLIST</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="info-item">🚚 Free shipping on orders over $100</div>
+                            <div class="info-item">↩️ 30-day return policy</div>
+                            <div class="info-item">🛡️ 2-year warranty included</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-tabs">
+            <div class="container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="specifications">SPECIFICATIONS</button>
+                    <button class="tab-btn" data-tab="reviews">REVIEWS</button>
+                    <button class="tab-btn" data-tab="shipping">SHIPPING</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="specifications">
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <strong>Display:</strong> 1.4" AMOLED Retina
+                            </div>
+                            <div class="spec-item">
+                                <strong>Battery:</strong> 7 days typical use
+                            </div>
+                            <div class="spec-item">
+                                <strong>Water Resistance:</strong> 50m waterproof
+                            </div>
+                            <div class="spec-item">
+                                <strong>Connectivity:</strong> Bluetooth 5.0, WiFi
+                            </div>
+                            <div class="spec-item">
+                                <strong>Sensors:</strong> Heart rate, GPS, Accelerometer
+                            </div>
+                            <div class="spec-item">
+                                <strong>Compatibility:</strong> iOS 12+, Android 6+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="reviews">
+                        <div class="reviews-section">
+                            <div class="reviews-summary">
+                                <div class="rating-overview">
+                                    <div class="rating-score">4.9</div>
+                                    <div class="rating-stars">★★★★★</div>
+                                    <div class="rating-count">234 reviews</div>
+                                </div>
+                                <div class="rating-breakdown">
+                                    <div class="rating-bar">
+                                        <span>5★</span>
+                                        <div class="bar"><div class="fill" style="width: 85%"></div></div>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>4★</span>
+                                        <div class="bar"><div class="fill" style="width: 10%"></div></div>
+                                        <span>10%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>3★</span>
+                                        <div class="bar"><div class="fill" style="width: 3%"></div></div>
+                                        <span>3%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>2★</span>
+                                        <div class="bar"><div class="fill" style="width: 1%"></div></div>
+                                        <span>1%</span>
+                                    </div>
+                                    <div class="rating-bar">
+                                        <span>1★</span>
+                                        <div class="bar"><div class="fill" style="width: 1%"></div></div>
+                                        <span>1%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="individual-reviews">
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-name">Alex Thompson</div>
+                                        <div class="review-rating">★★★★★</div>
+                                        <div class="review-date">March 15, 2025</div>
+                                    </div>
+                                    <p>Absolutely love this smartwatch! The battery life is incredible and the health tracking features are spot-on. Highly recommended!</p>
+                                </div>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-name">Sarah Chen</div>
+                                        <div class="review-rating">★★★★★</div>
+                                        <div class="review-date">March 10, 2025</div>
+                                    </div>
+                                    <p>Great build quality and the waterproof feature works perfectly. I wear it swimming and it's never had any issues.</p>
+                                </div>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <div class="reviewer-name">Mike Rodriguez</div>
+                                        <div class="review-rating">★★★★☆</div>
+                                        <div class="review-date">March 8, 2025</div>
+                                    </div>
+                                    <p>Solid smartwatch with great features. Only minor complaint is that the charging cable could be longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="shipping">
+                        <div class="shipping-info">
+                            <h3>Shipping Options</h3>
+                            <div class="shipping-option">
+                                <strong>Standard Shipping (5-7 business days)</strong> - FREE on orders over $100, $9.99 otherwise
+                            </div>
+                            <div class="shipping-option">
+                                <strong>Express Shipping (2-3 business days)</strong> - $19.99
+                            </div>
+                            <div class="shipping-option">
+                                <strong>Overnight Shipping (Next business day)</strong> - $39.99
+                            </div>
+                            <h3>Return Policy</h3>
+                            <p>30-day hassle-free returns. Items must be in original condition with all packaging.</p>
+                            <h3>Warranty</h3>
+                            <p>2-year manufacturer warranty covering defects and normal wear.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <div class="container">
+                <h2 class="section-title">YOU MIGHT ALSO LIKE</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/headphones/400/300" alt="GEMINI Headphones Pro">
+                            <div class="product-badge">POPULAR</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI HEADPHONES PRO</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(445)</span>
+                            </div>
+                            <div class="product-price">$249.99</div>
+                            <button class="add-to-cart-btn" data-product-id="4" data-name="GEMINI Headphones Pro" data-price="249.99" data-image="https://picsum.photos/seed/headphones/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/speaker/400/300" alt="GEMINI Speaker Boom">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI SPEAKER BOOM</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="rating-count">(156)</span>
+                            </div>
+                            <div class="product-price">$149.99</div>
+                            <button class="add-to-cart-btn" data-product-id="5" data-name="GEMINI Speaker Boom" data-price="149.99" data-image="https://picsum.photos/seed/speaker/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/earbuds/400/300" alt="GEMINI Earbuds True">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">GEMINI EARBUDS TRUE</h3>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(312)</span>
+                            </div>
+                            <div class="product-price">$179.99</div>
+                            <button class="add-to-cart-btn" data-product-id="6" data-name="GEMINI Earbuds True" data-price="179.99" data-image="https://picsum.photos/seed/earbuds/400/300">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GEMINI STORE</h4>
+                    <p>Neobrutalist e-commerce platform delivering bold shopping experiences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="login.html">Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>SUPPORT</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GEMINI STORE. All rights reserved. Built with neobrutalist design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="src/js/cart.js"></script>
+    <script src="src/js/navigation.js"></script>
+    <script src="src/js/products.js"></script>
+</body>
+</html>
