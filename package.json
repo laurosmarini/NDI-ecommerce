@@ -1,0 +1,38 @@
+{
+  "name": "gemini-ecommerce",
+  "version": "1.0.0",
+  "description": "Complete Neobrutalist E-Commerce Application with Shopping Cart",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -s",
+    "build": "echo 'Static site - no build needed'",
+    "dev": "npx serve . -l 3000",
+    "test": "echo 'Tests will be added soon'"
+  },
+  "keywords": [
+    "ecommerce",
+    "neobrutalism",
+    "shopping-cart",
+    "responsive",
+    "accessibility",
+    "vanilla-js",
+    "css-grid",
+    "flexbox"
+  ],
+  "author": "GEMINI Store",
+  "license": "MIT",
+  "homepage": "https://github.com/laurosmarini/NDI-ecommerce",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurosmarini/NDI-ecommerce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/laurosmarini/NDI-ecommerce/issues"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

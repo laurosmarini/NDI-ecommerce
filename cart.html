@@ -6,119 +6,89 @@
     <title>Shopping Cart - GEMINI STORE</title>
     <meta name="description" content="Review your items and proceed to checkout">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <a href="index.html">GEMINI STORE</a>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">GEMINI STORE</a>
+                </div>
+                <div class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="ecommerce.html" class="nav-link">Products</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="login.html" class="nav-link">Login</a></li>
+                </ul>
             </div>
-            <div class="hamburger-menu" aria-label="Toggle navigation">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="products.html">PRODUCTS</a></li>
-                <li><a href="ecommerce.html">FEATURED</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-                <li><a href="blog.html">BLOG</a></li>
-                <li><a href="pricing.html">PRICING</a></li>
-                <li><a href="login.html">LOGIN</a></li>
-                <li><a href="cart.html" class="cart-link active">CART <span class="cart-count">0</span></a></li>
-            </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="page-header">
+    <main id="main">
+        <section class="section">
             <div class="container">
-                <h1 class="page-title">SHOPPING CART</h1>
-                <p class="page-subtitle">Review your items before checkout</p>
-            </div>
-        </section>
+                <div class="page-header">
+                    <h1>Your Shopping Cart</h1>
+                    <p>Review your items before checkout</p>
+                </div>
 
-        <section class="cart-section">
-            <div class="container">
-                <div class="cart-content">
+                <!-- Cart Content -->
+                <div class="cart-page-content">
                     <!-- Empty Cart State -->
-                    <div class="empty-cart" id="empty-cart">
-                        <div class="empty-cart-icon">🛒</div>
-                        <h2>YOUR CART IS EMPTY</h2>
-                        <p>Add some amazing products to get started!</p>
-                        <a href="products.html" class="btn btn-primary">BROWSE PRODUCTS</a>
+                    <div class="empty-cart-state" id="empty-cart-state" style="display: none;">
+                        <div class="card card--pink">
+                            <div style="text-align: center; padding: var(--space-8);">
+                                <div style="font-size: 4rem; margin-bottom: var(--space-4);">🛒</div>
+                                <h2>Your cart is empty!</h2>
+                                <p style="margin-bottom: var(--space-6);">Add some amazing products to get started.</p>
+                                <a href="ecommerce.html" class="btn btn--primary btn--lg">Shop Now</a>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Cart Items -->
-                    <div class="cart-items" id="cart-items" style="display: none;">
-                        <div class="cart-header">
-                            <h2>CART ITEMS <span class="item-count" id="item-count">(0 items)</span></h2>
-                            <button class="clear-cart-btn" id="clear-cart">CLEAR ALL</button>
-                        </div>
-
-                        <div class="cart-list" id="cart-list">
+                    <div class="cart-items-container" id="cart-items-container">
+                        <div class="cart-items-list" id="cart-items-list">
                             <!-- Cart items will be dynamically inserted here -->
                         </div>
 
-                        <div class="cart-summary">
-                            <div class="summary-row">
+                        <!-- Cart Summary -->
+                        <div class="cart-summary card card--blue">
+                            <h3>Order Summary</h3>
+                            <div class="summary-line">
                                 <span>Subtotal:</span>
-                                <span id="subtotal">$0.00</span>
+                                <span id="cart-subtotal">$0.00</span>
                             </div>
-                            <div class="summary-row">
+                            <div class="summary-line">
+                                <span>Tax:</span>
+                                <span id="cart-tax">$0.00</span>
+                            </div>
+                            <div class="summary-line">
                                 <span>Shipping:</span>
-                                <span id="shipping">$9.99</span>
+                                <span id="cart-shipping">$0.00</span>
                             </div>
-                            <div class="summary-row">
-                                <span>Tax (8.5%):</span>
-                                <span id="tax">$0.00</span>
+                            <div class="summary-line total">
+                                <strong>
+                                    <span>Total:</span>
+                                    <span id="cart-total">$0.00</span>
+                                </strong>
                             </div>
-                            <div class="summary-row total">
-                                <span>Total:</span>
-                                <span id="total">$0.00</span>
-                            </div>
-                        </div>
-
-                        <div class="cart-actions">
-                            <a href="products.html" class="btn btn-secondary">CONTINUE SHOPPING</a>
-                            <a href="checkout.html" class="btn btn-primary" id="checkout-btn">PROCEED TO CHECKOUT</a>
-                        </div>
-                    </div>
-
-                    <!-- Recommended Products -->
-                    <div class="recommended-products">
-                        <h3>YOU MIGHT ALSO LIKE</h3>
-                        <div class="recommendations-grid">
-                            <div class="recommendation-card">
-                                <div class="product-image">
-                                    <img src="https://picsum.photos/seed/rec1/300/200" alt="GEMINI Power Bank">
-                                </div>
-                                <div class="product-info">
-                                    <h4>GEMINI POWER BANK</h4>
-                                    <p class="price">$59.99</p>
-                                    <button class="add-to-cart-btn" data-product-id="101" data-name="GEMINI Power Bank" data-price="59.99" data-image="https://picsum.photos/seed/rec1/300/200">ADD TO CART</button>
-                                </div>
-                            </div>
-                            <div class="recommendation-card">
-                                <div class="product-image">
-                                    <img src="https://picsum.photos/seed/rec2/300/200" alt="GEMINI Mouse Pro">
-                                </div>
-                                <div class="product-info">
-                                    <h4>GEMINI MOUSE PRO</h4>
-                                    <p class="price">$79.99</p>
-                                    <button class="add-to-cart-btn" data-product-id="102" data-name="GEMINI Mouse Pro" data-price="79.99" data-image="https://picsum.photos/seed/rec2/300/200">ADD TO CART</button>
-                                </div>
-                            </div>
-                            <div class="recommendation-card">
-                                <div class="product-image">
-                                    <img src="https://picsum.photos/seed/rec3/300/200" alt="GEMINI Keyboard">
-                                </div>
-                                <div class="product-info">
-                                    <h4>GEMINI KEYBOARD</h4>
-                                    <p class="price">$129.99</p>
-                                    <button class="add-to-cart-btn" data-product-id="103" data-name="GEMINI Keyboard" data-price="129.99" data-image="https://picsum.photos/seed/rec3/300/200">ADD TO CART</button>
-                                </div>
+                            <div style="margin-top: var(--space-6);">
+                                <button class="btn btn--primary btn--lg" onclick="proceedToCheckout()" style="width: 100%;">
+                                    Proceed to Checkout
+                                </button>
+                                <button class="btn btn--secondary" onclick="clearCart()" style="width: 100%; margin-top: var(--space-2);">
+                                    Clear Cart
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -129,36 +99,320 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>GEMINI STORE</h4>
-                    <p>Neobrutalist e-commerce platform delivering bold shopping experiences</p>
-                </div>
-                <div class="footer-section">
-                    <h4>QUICK LINKS</h4>
-                    <ul>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                        <li><a href="checkout.html">Checkout</a></li>
-                        <li><a href="login.html">Account</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>SUPPORT</h4>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 GEMINI STORE. All rights reserved. Built with neobrutalist design.</p>
-            </div>
+            <p>&copy; 2025 GEMINI Store. All rights reserved. Built with Neobrutalist Design.</p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
+    <script src="src/js/cart.js"></script>
+    <script src="src/js/navigation.js"></script>
+    <script src="src/js/products.js"></script>
+    
+    <script>
+        // Cart page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🛒 Cart page loaded');
+            
+            // Load cart items from localStorage
+            loadCartPage();
+            
+            // Update cart display every few seconds in case of changes
+            setInterval(loadCartPage, 2000);
+        });
+
+        function loadCartPage() {
+            try {
+                const cartData = localStorage.getItem('gemini-cart');
+                const cartItems = cartData ? JSON.parse(cartData) : [];
+                
+                console.log('Loading cart with items:', cartItems);
+                
+                if (cartItems.length === 0) {
+                    showEmptyCart();
+                } else {
+                    showCartItems(cartItems);
+                }
+            } catch (error) {
+                console.error('Error loading cart:', error);
+                showEmptyCart();
+            }
+        }
+
+        function showEmptyCart() {
+            document.getElementById('empty-cart-state').style.display = 'block';
+            document.getElementById('cart-items-container').style.display = 'none';
+        }
+
+        function showCartItems(items) {
+            document.getElementById('empty-cart-state').style.display = 'none';
+            document.getElementById('cart-items-container').style.display = 'block';
+            
+            const cartItemsList = document.getElementById('cart-items-list');
+            
+            // Calculate totals
+            const subtotal = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = subtotal * 0.08;
+            const shipping = subtotal > 50 ? 0 : 9.99;
+            const total = subtotal + tax + shipping;
+            
+            // Update summary
+            document.getElementById('cart-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('cart-tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('cart-shipping').textContent = `$${shipping.toFixed(2)}`;
+            document.getElementById('cart-total').textContent = `$${total.toFixed(2)}`;
+            
+            // Create cart items HTML
+            cartItemsList.innerHTML = items.map(item => `
+                <div class="cart-page-item card" data-product-id="${item.id}">
+                    <div class="item-image">
+                        <img src="${item.image}" alt="${item.name}" loading="lazy">
+                    </div>
+                    <div class="item-details">
+                        <h3 class="item-name">${item.name}</h3>
+                        <p class="item-price">$${item.price.toFixed(2)}</p>
+                    </div>
+                    <div class="item-controls">
+                        <div class="quantity-controls">
+                            <button class="quantity-btn btn btn--sm" onclick="updateQuantity('${item.id}', -1)">-</button>
+                            <span class="quantity-display">${item.quantity}</span>
+                            <button class="quantity-btn btn btn--sm" onclick="updateQuantity('${item.id}', 1)">+</button>
+                        </div>
+                        <button class="remove-btn btn btn--danger btn--sm" onclick="removeItem('${item.id}')">Remove</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function updateQuantity(productId, change) {
+            try {
+                const cartData = localStorage.getItem('gemini-cart');
+                let cartItems = cartData ? JSON.parse(cartData) : [];
+                
+                const item = cartItems.find(item => item.id === productId);
+                if (item) {
+                    item.quantity += change;
+                    
+                    if (item.quantity <= 0) {
+                        removeItem(productId);
+                        return;
+                    }
+                    
+                    localStorage.setItem('gemini-cart', JSON.stringify(cartItems));
+                    loadCartPage();
+                    
+                    // Announce to screen reader
+                    if (window.announceToScreenReader) {
+                        window.announceToScreenReader(`Updated ${item.name} quantity to ${item.quantity}`);
+                    }
+                }
+            } catch (error) {
+                console.error('Error updating quantity:', error);
+            }
+        }
+
+        function removeItem(productId) {
+            try {
+                const cartData = localStorage.getItem('gemini-cart');
+                let cartItems = cartData ? JSON.parse(cartData) : [];
+                
+                const itemName = cartItems.find(item => item.id === productId)?.name || 'item';
+                cartItems = cartItems.filter(item => item.id !== productId);
+                
+                localStorage.setItem('gemini-cart', JSON.stringify(cartItems));
+                loadCartPage();
+                
+                // Announce to screen reader
+                if (window.announceToScreenReader) {
+                    window.announceToScreenReader(`Removed ${itemName} from cart`);
+                }
+            } catch (error) {
+                console.error('Error removing item:', error);
+            }
+        }
+
+        function clearCart() {
+            if (confirm('Are you sure you want to clear your cart?')) {
+                localStorage.removeItem('gemini-cart');
+                loadCartPage();
+                
+                if (window.announceToScreenReader) {
+                    window.announceToScreenReader('Cart cleared');
+                }
+            }
+        }
+
+        function proceedToCheckout() {
+            const cartData = localStorage.getItem('gemini-cart');
+            const cartItems = cartData ? JSON.parse(cartData) : [];
+            
+            if (cartItems.length === 0) {
+                alert('Your cart is empty! Add some products first.');
+                return;
+            }
+            
+            // Store checkout data
+            localStorage.setItem('checkout-data', JSON.stringify({
+                items: cartItems,
+                timestamp: Date.now()
+            }));
+            
+            // Redirect to checkout
+            window.location.href = 'checkout.html';
+        }
+    </script>
+
+    <style>
+        /* Cart Page Specific Styles */
+        .page-header {
+            text-align: center;
+            margin-bottom: var(--space-12);
+        }
+        
+        .page-header h1 {
+            font-size: var(--font-size-4xl);
+            color: var(--neon-pink);
+            margin-bottom: var(--space-2);
+        }
+        
+        .page-header p {
+            font-size: var(--font-size-lg);
+            color: var(--black);
+            max-width: none;
+        }
+        
+        .cart-page-content {
+            display: grid;
+            gap: var(--space-8);
+        }
+        
+        .cart-items-container {
+            display: grid;
+            gap: var(--space-8);
+            grid-template-columns: 2fr 1fr;
+        }
+        
+        @media (max-width: 768px) {
+            .cart-items-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .cart-page-item {
+            display: grid;
+            grid-template-columns: 100px 1fr auto;
+            gap: var(--space-4);
+            align-items: center;
+            margin-bottom: var(--space-4);
+            padding: var(--space-4);
+        }
+        
+        @media (max-width: 640px) {
+            .cart-page-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: var(--space-3);
+            }
+        }
+        
+        .item-image img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: var(--border-width-thin) solid var(--black);
+            border-radius: var(--border-radius-md);
+        }
+        
+        .item-name {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-bold);
+            color: var(--black);
+            margin-bottom: var(--space-1);
+        }
+        
+        .item-price {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--lime-green);
+            margin: 0;
+        }
+        
+        .item-controls {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
+            align-items: flex-end;
+        }
+        
+        @media (max-width: 640px) {
+            .item-controls {
+                align-items: center;
+            }
+        }
+        
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        
+        .quantity-display {
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-lg);
+            min-width: 2rem;
+            text-align: center;
+        }
+        
+        .cart-summary {
+            padding: var(--space-6);
+            height: fit-content;
+            position: sticky;
+            top: var(--space-8);
+        }
+        
+        .cart-summary h3 {
+            color: var(--black);
+            margin-bottom: var(--space-4);
+            text-align: center;
+        }
+        
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-2) 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .summary-line.total {
+            border-bottom: none;
+            border-top: var(--border-width-thick) solid var(--black);
+            margin-top: var(--space-3);
+            padding-top: var(--space-3);
+            font-size: var(--font-size-lg);
+        }
+        
+        .empty-cart-state {
+            text-align: center;
+            grid-column: 1 / -1;
+        }
+        
+        /* Loading animation */
+        .cart-loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: var(--space-12);
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--gray-100);
+            border-top: 4px solid var(--neon-pink);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+    </style>
 </body>
 </html>
